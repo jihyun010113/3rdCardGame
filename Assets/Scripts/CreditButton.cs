@@ -8,70 +8,62 @@ public class CreditButton : MonoBehaviour
 
     public GameObject CreditSence;
 
+
+
+
+    private void Update()
+    {
+
+        if (Input.anyKeyDown) {
+
+
+
+            if(CreditSence.activeSelf == true)
+            {
+
+
+                CreditSence.SetActive(false);
+                Debug.Log("if문 실행됨");
+
+            }
+        
+        
+        }
+
+
+        
+
+
+
+
+
+
+
+        
+
+    }
+
     public void Credit()
     {
 
 
-        if (gameObject.activeSelf == true)
+        if (CreditSence.activeSelf == false)
         {
 
-            Debug.Log("if문 실행");
 
             CreditSence.SetActive(true);
 
 
-            
-
-
-
 
 
 
         }
 
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
 
-
-            CreditSence.SetActive(false);
-
-
-
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-
-
-
-            CreditSence.SetActive(false);
-
-
-
-
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-
-
-            CreditSence.SetActive(false);
-
-
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-
-
-
-
-            CreditSence.SetActive(false);
-
-
-        }
 
     }
+
+
 }
+

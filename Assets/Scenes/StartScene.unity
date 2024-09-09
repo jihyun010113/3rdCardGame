@@ -300,7 +300,6 @@ RectTransform:
   - {fileID: 1603367055}
   - {fileID: 2112353635}
   - {fileID: 263718466}
-  - {fileID: 1254446457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -809,6 +808,7 @@ GameObject:
   - component: {fileID: 1254446460}
   - component: {fileID: 1254446459}
   - component: {fileID: 1254446458}
+  - component: {fileID: 1254446461}
   m_Layer: 5
   m_Name: CreditScene
   m_TagString: Untagged
@@ -831,12 +831,12 @@ RectTransform:
   - {fileID: 1856651476}
   - {fileID: 1049508615}
   - {fileID: 562617828}
-  m_Father: {fileID: 249029563}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 30.688477, y: 51.68579}
+  m_AnchoredPosition: {x: 380, y: 641}
+  m_SizeDelta: {x: 790.6885, y: 1331.6858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254446458
 MonoBehaviour:
@@ -901,6 +901,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1254446461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254446456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72dd8a20b1718b3459fd521f59915e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreditSence: {fileID: 1254446456}
 --- !u!1 &1581434948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,3 +1514,4 @@ SceneRoots:
   - {fileID: 354830171}
   - {fileID: 249029563}
   - {fileID: 1581434951}
+  - {fileID: 1254446457}
