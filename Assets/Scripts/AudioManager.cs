@@ -4,15 +4,51 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static AudioManager Instance;
+
+    public AudioClip OpenSound;
+    public AudioClip MactchSound;
+    public AudioClip MissMactchSound;
+    public AudioClip BackGorundMusic;
+    public AudioClip HurryUpSound;
+
+    AudioSource audioSource;
+
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = this.BackGorundMusic; //브금
+
+        if (Time.deltaTime < 10.0f) // Time 10초미만일때 조급한 브금
+        {
+            audioSource.PlayOneShot(HurryUpSound);
+            Destroy(gameObject);
+        }
+    }
+    public void OpenCardSound() //카드 열때 소리
+    {
+        audioSource.PlayOneShot(OpenSound);
+    }
+
+    public void MatchedSound() //카드 맞출때 소리
+    {
+        audioSource.PlayOneShot(MactchSound);
+    }
+    public void MissMatchSound() // 카드 못맞출때 소리
+    {
+        audioSource.PlayOneShot(MactchSound);
     }
 }
