@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -26,16 +28,16 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = this.BackGorundMusic; //브금
+        audioSource.Play();
 
         if (Time.deltaTime < 10.0f) // Time 10초미만일때 조급한 브금
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(HurryUpSound);
-            Destroy(gameObject);
         }
     }
     public void OpenCardSound() //카드 열때 소리
@@ -49,6 +51,6 @@ public class AudioManager : MonoBehaviour
     }
     public void MissMatchSound() // 카드 못맞출때 소리
     {
-        audioSource.PlayOneShot(MactchSound);
+        audioSource.PlayOneShot(MissMactchSound);
     }
 }
