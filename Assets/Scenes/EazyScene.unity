@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &557181313
 Transform:
   m_ObjectHideFlags: 0
@@ -343,10 +343,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idx: 0
-  frontImage: {fileID: 0}
-  randomImages: []
-  front: {fileID: 0}
-  back: {fileID: 0}
+  frontImage: {fileID: 557181314}
+  randomImages:
+  - {fileID: 162707725, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: 592496459, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: 1211542607, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: 440741134, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: -478707040, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: -1601804072, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: -563662337, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  - {fileID: 1863707800, guid: b8710442871a64e4db4a38e64a7dcc62, type: 3}
+  front: {fileID: 557181312}
+  back: {fileID: 531283870}
   anim: {fileID: 0}
 --- !u!4 &1043095948
 Transform:
