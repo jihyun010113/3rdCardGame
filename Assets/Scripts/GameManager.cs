@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public Card firstCard;
     public Card secondCard;
-    public int cardCount;
+    public int cardCount = 0;
 
     private void Awake()
     {
@@ -66,13 +66,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("조급함 실행됨");
            
             AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
-            //AudioManager.Instance.audioSource.Stop();
+            AudioManager.Instance.audioSource.Stop();
             AudioManager.Instance.audioSource.Play();
 
         }
     }
 
- 
+    
     public void Matched()
     {
         if (firstCard.idx == secondCard.idx)
