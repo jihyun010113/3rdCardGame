@@ -1676,6 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3d9c7c5a24e4544aa6ae614b5dfae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 161922304}
   time: 0
   timeLimit: {fileID: 1190600491}
   win: {fileID: 320752077}
