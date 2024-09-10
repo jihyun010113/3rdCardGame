@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public EndPanel endpanel;
     public float time;
     float time_Tmp;
 
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public Card firstCard;
     public Card secondCard;
-    public int cardCount;
+    public int cardCount = 0;
         
 
 
@@ -89,11 +90,13 @@ public class GameManager : MonoBehaviour
             audioSource.PlayOneShot(clip);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
-            cardCount -= 2;
-            if (cardCount == 0)
+
+            cardCount += 2;
+            if (cardCount == 16)
             {
                 win.gameObject.SetActive(true);
                 Time.timeScale = 0f;
+                endpanel.GameOver(time_Tmp);
             }
         }
         else
