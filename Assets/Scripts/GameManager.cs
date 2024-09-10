@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
         Time.timeScale = 1f;
     }
 
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     {
         time = 30f;
         time_Tmp = time;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
