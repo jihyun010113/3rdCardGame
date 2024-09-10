@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//레벨메니저
 public class LevelManager : MonoBehaviour
 {
     public int match_cnt;
