@@ -7,6 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public LevelManager levelManager;
 
     public float time;
     float time_Tmp;
@@ -114,38 +115,10 @@ public class GameManager : MonoBehaviour
 
     public void Correct_Card()
     {
+        levelManager.Match_CntUp();
         if (time_Tmp + 3f <= time)
             time_Tmp += 3f;
         else
             time_Tmp = time;
-    }
-
-    //장애물 관련
-    public void CameraRotation()
-    {
-        StartCoroutine("CameraRotation_Coroutine");
-    }
-    IEnumerator CameraRotation_Coroutine()
-    {
-        for (int i = 0; i < 180; i++)
-        {
-            camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, i);
-            yield return new WaitForSeconds(0.01f);
-        }
-        camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
-
-        yield return new WaitForSeconds(3f);
-        camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-    }
-
-    public void Curtain_Time()
-    {
-        timeCurtain.gameObject.SetActive(true);
-        Invoke("Dis_timeCurtain", 5f);
-    }
-
-    void Dis_timeCurtain()
-    {
-        timeCurtain.gameObject.SetActive(false);
     }
 }
