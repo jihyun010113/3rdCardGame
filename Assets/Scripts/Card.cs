@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Card : MonoBehaviour
-{   
+{
     public int idx = 0;
     public SpriteRenderer frontImage;
     public Sprite[] randomImages;
@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class Card : MonoBehaviour
     public void ImageSetting(int number)
     {
         idx = number;
-        frontImage.sprite = randomImages[number];
+        frontImage.sprite = randomImages[idx];
     }
     public void OpenCard()
     {
@@ -47,23 +47,22 @@ public class Card : MonoBehaviour
 
         }
     }
-        public void DestroyCard()
-        {
-            Invoke("DestroyCardInvoke", 0.5f);
-        }
-        public void DestroyCardInvoke()
-        {
-            Destroy(gameObject);
-        }
-        public void CloseCard()
-        {
-            Invoke("CloseCardInvoke", 0.5f);
-        }
-        public void CloseCardInvoke()
-        {
-            anim.SetBool("isOpen", false);
-            front.SetActive(false);
-            back.SetActive(true);
-        }
+    public void DestroyCard()
+    {
+        Invoke("DestroyCardInvoke", 0.5f);
+    }
+    public void DestroyCardInvoke()
+    {
+        Destroy(gameObject);
+    }
+    public void CloseCard()
+    {
+        Invoke("CloseCardInvoke", 0.5f);
+    }
+    public void CloseCardInvoke()
+    {
+        anim.SetBool("isOpen", false);
+        front.SetActive(false);
+        back.SetActive(true);
     }
 }
