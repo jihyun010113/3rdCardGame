@@ -53,6 +53,12 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             lose.gameObject.SetActive(true);
         }
+
+        if (time_Tmp < 10.0f) // Time 10초미만일때 조급한 브금
+        {
+            AudioManager.Instance.audioSource.Stop();
+            AudioManager.Instance.audioSource.PlayOneShot(AudioManager.Instance.HurryUpSound);
+        }
     }
 
     //카드 코드 작성 후 해방
