@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HardScene.unity
     guid: c33cec39e84d9474399ec2dde985ee0a
   - enabled: 1
-    path: Assets/Scenes/NormalSence.unity
+    path: Assets/Scenes/NormalScene.unity
     guid: 6e3a61340c8194e43a33a5043caf41fa
   - enabled: 1
     path: Assets/Scenes/EazyScene.unity

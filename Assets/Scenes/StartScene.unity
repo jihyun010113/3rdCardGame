@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
+  selectSence: {fileID: 864907748}
 --- !u!114 &1445596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1445595}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: Easy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
+  selectSence: {fileID: 864907748}
 --- !u!114 &481641241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,7 +1177,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 481641240}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: SelectBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1374,7 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
+  selectSence: {fileID: 864907748}
 --- !u!114 &509974055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,7 +1421,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 509974054}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: Hard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1705,7 +1705,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 636842418}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: Normal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3547,7 +3547,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3878,11 +3878,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 200
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
