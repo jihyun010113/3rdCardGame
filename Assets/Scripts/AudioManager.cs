@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip MactchSound;
     public AudioClip MissMactchSound;
     public AudioClip BackGorundMusic;
-    public AudioClip HurryUpSound;
+    public AudioClip HurryUpMusic;
 
     public AudioSource audioSource;
 
@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = this.BackGorundMusic; //브금
         audioSource.Play();
 
+
     }
     public void OpenCardSound() //카드 열때 소리
     {
@@ -58,6 +59,12 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(MissMactchSound);
     }
+    public void HurryUp() // 서두를때 소리
+    {
+
+        audioSource.PlayOneShot(HurryUpMusic);
+
+    }
 
     public void AudioControl()
     
@@ -70,6 +77,7 @@ public class AudioManager : MonoBehaviour
     
     
     }
+
 
     
 }

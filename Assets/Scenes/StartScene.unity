@@ -1288,7 +1288,7 @@ MonoBehaviour:
   MactchSound: {fileID: 8300000, guid: 2a4e8e97ff4021844ae384a942b9a2d7, type: 3}
   MissMactchSound: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
   BackGorundMusic: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
-  HurryUpSound: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
+  HurryUpMusic: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
   audioSource: {fileID: 1359508517}
 --- !u!4 &1359508516
 Transform:
@@ -1315,7 +1315,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 08a68409a7e328d459e5810687973cdf, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

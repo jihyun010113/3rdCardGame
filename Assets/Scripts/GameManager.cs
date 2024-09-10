@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -17,10 +17,15 @@ public class GameManager : MonoBehaviour
     public Camera camera;
 
 
-    /*//card 매치 관련
+    bool isHurry = false;
+
+    AudioSource audioSource;
+    public AudioClip clip;
+    
+
     public Card firstCard;
     public Card secondCard;
-    public int cardCount;*/
+    public int cardCount;
 
     private void Awake()
     {
@@ -54,15 +59,21 @@ public class GameManager : MonoBehaviour
             lose.gameObject.SetActive(true);
         }
 
-        if (time_Tmp < 10.0f) // Time 10초미만일때 조급한 브금
+        if (isHurry == false && time_Tmp <= 10f ) // Time 10초미만일때 조급한 브금
         {
-            AudioManager.Instance.audioSource.Stop();
-            AudioManager.Instance.audioSource.PlayOneShot(AudioManager.Instance.HurryUpSound);
+            isHurry = true; // 스위치가 켜짐
+
+            Debug.Log("조급함 실행됨");
+           
+            AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
+            //AudioManager.Instance.audioSource.Stop();
+            AudioManager.Instance.audioSource.Play();
+
         }
     }
 
-    //카드 코드 작성 후 해방
-    /*public void Mached()
+ 
+    public void Matched()
     {
         if (firstCard.idx == secondCard.idx)
         {
@@ -86,7 +97,7 @@ public class GameManager : MonoBehaviour
 
         firstCard = null;
         secondCard = null;
-    }*/
+    }
 
     public void Wrong_Card()
     {

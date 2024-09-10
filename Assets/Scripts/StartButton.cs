@@ -11,7 +11,7 @@ public class StartButton : MonoBehaviour
     {
 
 
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("NormalSence");
 
 
 
