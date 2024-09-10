@@ -5,71 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public GameObject selectSence;
 
-    public void StageSelect()
+
+    public void GameStart()
     {
 
 
-        if ( selectSence.activeSelf == false)
-        {
-
-
-            selectSence.SetActive(true);
-
-
-
-        }
+        SceneManager.LoadScene("NormalSence");
 
 
 
     }
 
-    public void Easy()
-    {
-
-
-        SceneManager.LoadScene("EazyScene");
-
-
-    }
-
-    public void Normal()
-
-    {
-
-        SceneManager.LoadScene("NormalScene");
-
-
-
-    }
-
-    public void Hard()
-
-    {
-
-
-        SceneManager.LoadScene("HardScene");
-
-
-    }
-
-    public void SelectBack()
-
-    {
-
-        if (selectSence.activeSelf == true)
-        {
-
-
-            selectSence.SetActive(false);
-
-
-
-        }
-
-
-
-    }
 
 }
