@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        else
+        {
+            Destroy(this);
+        }
         Time.timeScale = 1f;
     }
 
