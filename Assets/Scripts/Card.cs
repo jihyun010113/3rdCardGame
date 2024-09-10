@@ -11,6 +11,9 @@ public class Card : MonoBehaviour
     public GameObject back;
     public Animator anim;
 
+    AudioSource audioSource;
+    public AudioClip clip;
+
     void Start()
     {
         
@@ -23,18 +26,44 @@ public class Card : MonoBehaviour
     }
     public void ImageSetting(int number)
     {
+        idx = number;
         frontImage.sprite = randomImages[number];
     }
     public void OpenCard()
     {
+        audioSource.PlayOneShot(clip);
         anim.SetBool("isOpen", true);
         front.SetActive(true);
         back.SetActive(false);
+
+        if (GameManager.Instance.firstCard == null)
+        {
+            GameManager.Instance.firstCard = this;
+        }
+        else
+        {
+            GameManager.Instance.secondCard = this;
+            GameManager.Instance.Matched();
+
+        }
     }
-    public void CloseCard()
-    {
-        anim.SetBool("isOpen", false);
-        front.SetActive(false);
-        back.SetActive(true);
+        public void DestroyCard()
+        {
+            Invoke("DestroyCardInvoke", 0.5f);
+        }
+        public void DestroyCardInvoke()
+        {
+            Destroy(gameObject);
+        }
+        public void CloseCard()
+        {
+            Invoke("CloseCardInvoke", 0.5f);
+        }
+        public void CloseCardInvoke()
+        {
+            anim.SetBool("isOpen", false);
+            front.SetActive(false);
+            back.SetActive(true);
+        }
     }
 }
