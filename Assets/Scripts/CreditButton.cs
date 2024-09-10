@@ -8,7 +8,6 @@ public class CreditButton : MonoBehaviour
 
     public GameObject CreditSence;
     public GameObject OptionSence;
-   
 
     /*private void Update()
     {
@@ -98,8 +97,6 @@ public class CreditButton : MonoBehaviour
         }
 
     }
-
-
 
 }
 

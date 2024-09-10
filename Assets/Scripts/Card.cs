@@ -14,7 +14,6 @@ public class Card : MonoBehaviour
     AudioSource audioSource;
     public AudioClip clip;
 
-
     void Start()
     {
 

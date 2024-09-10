@@ -10,8 +10,6 @@ using UnityEngine.Audio; // 소리 조절을 위한 using
 public class AudioManager : MonoBehaviour
 {
 
-
-
     public AudioMixer masterMixer;
     public Slider audioSlider;
   
