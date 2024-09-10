@@ -30,7 +30,7 @@ public class CreditButton : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)  )
         {
 
 

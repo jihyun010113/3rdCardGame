@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
-  OptionSence: {fileID: 0}
+  OptionSence: {fileID: 1313814682}
 --- !u!1 &320241693
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ RectTransform:
   m_Father: {fileID: 740124226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
-  OptionSence: {fileID: 0}
+  OptionSence: {fileID: 1313814682}
 --- !u!1 &1313814682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,8 +1250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72dd8a20b1718b3459fd521f59915e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreditSence: {fileID: 0}
-  OptionSence: {fileID: 0}
+  CreditSence: {fileID: 1254446456}
+  OptionSence: {fileID: 1313814682}
 --- !u!1 &1359508514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,11 +1284,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 08a68409a7e328d459e5810687973cdf, type: 2}
   audioSlider: {fileID: 1846333121}
-  OpenSound: {fileID: 0}
-  MactchSound: {fileID: 0}
-  MissMactchSound: {fileID: 0}
-  BackGorundMusic: {fileID: 0}
-  HurryUpSound: {fileID: 0}
+  OpenSound: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
+  MactchSound: {fileID: 8300000, guid: 2a4e8e97ff4021844ae384a942b9a2d7, type: 3}
+  MissMactchSound: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
+  BackGorundMusic: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
+  HurryUpSound: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
+  audioSource: {fileID: 1359508517}
 --- !u!4 &1359508516
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,12 +1314,12 @@ AudioSource:
   m_GameObject: {fileID: 1359508514}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 08a68409a7e328d459e5810687973cdf, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1500,8 +1501,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 519857020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1851,13 +1852,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 455149144}
   m_HandleRect: {fileID: 1594623769}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -40
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359508515}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: AudioControl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1856651475
 GameObject:
   m_ObjectHideFlags: 0

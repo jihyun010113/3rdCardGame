@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip BackGorundMusic;
     public AudioClip HurryUpSound;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -44,11 +44,6 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = this.BackGorundMusic; //브금
         audioSource.Play();
 
-        if (Time.deltaTime < 10.0f) // Time 10초미만일때 조급한 브금
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(HurryUpSound);
-        }
     }
     public void OpenCardSound() //카드 열때 소리
     {
