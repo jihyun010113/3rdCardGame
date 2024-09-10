@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public void Match_CntUp()
     {
+        //asdf
         match_cnt++;
         if (match_cnt >= 2)
         {
