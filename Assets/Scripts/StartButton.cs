@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    public GameObject selectSence;
 
-
-    public void GameStart()
+    public void StageSelect()
     {
 
 
-        SceneManager.LoadScene("NormalSence");
+        if ( selectSence.activeSelf == false)
+        {
+
+
+            selectSence.SetActive(true);
+
+
+
+        }
 
 
 

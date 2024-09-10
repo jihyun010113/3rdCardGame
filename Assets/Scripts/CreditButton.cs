@@ -9,7 +9,7 @@ public class CreditButton : MonoBehaviour
     public GameObject CreditSence;
     public GameObject OptionSence;
 
-    private void Update()
+    /*private void Update()
     {
 
         if (Input.anyKeyDown) {
@@ -42,7 +42,7 @@ public class CreditButton : MonoBehaviour
 
 
 
-    }
+    }*/
 
     public void Option()
     {
@@ -55,6 +55,14 @@ public class CreditButton : MonoBehaviour
 
 
         }
+
+    }
+
+    public void OptionBack()
+    {
+
+        OptionSence.SetActive(false);
+
 
     }
 
@@ -73,6 +81,22 @@ public class CreditButton : MonoBehaviour
 
     }
 
+    public void CreditBack()
+    {
+
+
+
+        if (CreditSence.activeSelf == true)
+        {
+
+
+            CreditSence.SetActive(false);
+
+
+
+        }
+
+    }
 
 }
 
