@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
     public Sprite[] randomImages;
     public GameObject front;
     public GameObject back;
-    public Animator anim;
+    public Animator anim;    
 
     AudioSource audioSource;
     public AudioClip clip;
