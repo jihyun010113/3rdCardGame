@@ -2,10 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+
 using UnityEngine.UI;
+using UnityEngine.Audio; // 소리 조절을 위한 using
+
 
 public class AudioManager : MonoBehaviour
 {
+
+    public AudioMixer masterMixer;
+    public Slider audioSlider;
+  
+
+
+
     public static AudioManager Instance;
 
     public AudioClip OpenSound;
@@ -53,4 +63,19 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(MissMactchSound);
     }
+
+    public void AudioControl()
+    
+    {
+
+        float sound = audioSlider.value;
+
+        if (sound == -40f) masterMixer.SetFloat("Master", -80);
+        else masterMixer.SetFloat("Master", sound);
+    
+    
+    }
+
+    
 }
+

@@ -7,9 +7,7 @@ public class CreditButton : MonoBehaviour
 {
 
     public GameObject CreditSence;
-
-
-
+    public GameObject OptionSence;
 
     private void Update()
     {
@@ -26,20 +24,37 @@ public class CreditButton : MonoBehaviour
                 Debug.Log("if¹® ½ÇÇàµÊ");
 
             }
-        
-        
+
+
+
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && Input.GetKeyDown(KeyCode.Escape))
+        {
+
+
+            OptionSence.SetActive(false);
+
+
         }
 
 
-        
 
 
+    }
+
+    public void Option()
+    {
 
 
+        if (OptionSence.activeSelf == false)
+        {
+
+            OptionSence.SetActive(true);
 
 
-
-        
+        }
 
     }
 
@@ -53,13 +68,7 @@ public class CreditButton : MonoBehaviour
 
             CreditSence.SetActive(true);
 
-
-
-
-
         }
-
-
 
 
     }
