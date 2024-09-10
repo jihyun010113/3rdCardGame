@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SocialPlatforms.Impl;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
     public Card firstCard;
     public Card secondCard;
     public int cardCount;
+        
+
 
     private void Awake()
     {

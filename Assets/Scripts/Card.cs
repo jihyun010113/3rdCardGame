@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour
 {
@@ -16,18 +18,30 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
+        FirstOpenCard(); //게임시작과 동시에 카드 1초간 보여주기 기능
     }
 
     // Update is called once per frame
     void Update()
     {
-
+               
     }
     public void ImageSetting(int number)
     {
         idx = number;
         frontImage.sprite = randomImages[idx];
+    }
+    public void FirstOpenCard() 
+    {
+        front.SetActive(true);
+        back.SetActive(false);
+        Invoke("FirstCloseCard", 1f);
+    }
+    public void FirstCloseCard() 
+    {        
+        front.SetActive(false);
+        back.SetActive(true);
     }
     public void OpenCard()
     {
@@ -44,8 +58,7 @@ public class Card : MonoBehaviour
         {
             GameManager.Instance.secondCard = this;
             GameManager.Instance.Matched();
-
-        }
+        }       
     }
     public void DestroyCard()
     {
@@ -65,4 +78,5 @@ public class Card : MonoBehaviour
         front.SetActive(false);
         back.SetActive(true);
     }
+    
 }
