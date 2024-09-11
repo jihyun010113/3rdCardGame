@@ -8,10 +8,12 @@ public class LevelManager : MonoBehaviour
 
     public int match_cnt;
 
-    public int[] obstacle_arr = { 0, 1 };
+    public int[] obstacle_arr;
     public GameObject timeCurtain;
     public Camera camera;
+    public GameObject crow;
 
+    public bool isObstacle;
     private void Awake()
     {
         if (Instance == null)
@@ -27,6 +29,15 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         match_cnt = 0;
+        obstacle_arr = new int[3] { 0, 1, 2 };
+    }
+
+    private void Update()
+    {
+        if (obstacle_arr[0] == 100 && obstacle_arr[1] == 100 && obstacle_arr[2] == 100)
+            isObstacle = false;
+        else
+            isObstacle = true;
     }
 
     public void Match_CntUp()
@@ -35,7 +46,7 @@ public class LevelManager : MonoBehaviour
         match_cnt++;
         if (match_cnt >= 2)
         {
-            if(obstacle_arr[0] != 100 || obstacle_arr[1] != 100)
+            if(isObstacle == true)
             {
                 match_cnt = 0;
                 Obstacle();
@@ -48,7 +59,7 @@ public class LevelManager : MonoBehaviour
         int ran_Obstacle;
         do
         {
-            ran_Obstacle = Random.Range(0, 2);
+            ran_Obstacle = Random.Range(0, 3);
         } while (obstacle_arr[ran_Obstacle] == 100);
 
         obstacle_arr[ran_Obstacle] = 100;
@@ -57,6 +68,8 @@ public class LevelManager : MonoBehaviour
             CameraRotation();
         else if (ran_Obstacle == 1)
             Curtain_Time();
+        else if (ran_Obstacle == 2)
+            Crow();
     }
 
     //장애물 관련
@@ -89,5 +102,16 @@ public class LevelManager : MonoBehaviour
     {
         timeCurtain.gameObject.SetActive(false);
         obstacle_arr[1] = 1;
+    }
+
+    public void Crow()
+    {
+        crow.gameObject.SetActive(true);
+        Invoke("Dis_Crow", 4f);
+    }
+    void Dis_Crow()
+    {
+        crow.gameObject.SetActive(false);
+        obstacle_arr[2] = 2;
     }
 }
