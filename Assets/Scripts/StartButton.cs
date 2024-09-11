@@ -18,8 +18,13 @@ public class StartButton : MonoBehaviour
 
     public void Start()
     {
-        bestNow = endPanel.GetBestScore();
-        bestNowTxt.text = bestNow.ToString("N1");
+        if (bestNow > 0)
+        {
+            bestNow = endPanel.GetBestScore();
+            bestNowTxt.text = bestNow.ToString("N1");
+        }
+
+
 
     }
 
