@@ -47,13 +47,7 @@ public class EndPanel : MonoBehaviour
         Score.text = totalScore.ToString("N1");
     }
 
-    public float GetBestScore() // 베스트 스코어를 반환하는 함수
-    {
 
 
 
-        return Best;
-
-
-    }
 }

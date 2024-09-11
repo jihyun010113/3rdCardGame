@@ -775,7 +775,6 @@ GameObject:
   - component: {fileID: 207192123}
   - component: {fileID: 207192122}
   - component: {fileID: 207192121}
-  - component: {fileID: 207192124}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -847,9 +846,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 207192124}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 334881315}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -897,19 +896,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207192119}
   m_CullTransparentMesh: 1
---- !u!114 &207192124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207192119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &303954161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,8 +1139,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 334881315}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Normal
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReNormal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1211,10 +1197,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 334881310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
+  m_Script: {fileID: 11500000, guid: b757598b65c75b54ea7e26c3eafe0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &336641026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 992905395}
   BestScore: {fileID: 101796414}
+  Best: 0
 --- !u!1 &411887653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,6 +3279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 790312779}
   BestScore: {fileID: 729468900}
+  Best: 0
 --- !u!1 &1837561740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,7 +3538,6 @@ GameObject:
   - component: {fileID: 2032355585}
   - component: {fileID: 2032355584}
   - component: {fileID: 2032355583}
-  - component: {fileID: 2032355586}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -3623,9 +3609,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2032355586}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Normal
+      - m_Target: {fileID: 334881315}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReNormal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3673,19 +3659,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032355581}
   m_CullTransparentMesh: 1
---- !u!114 &2032355586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032355581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &2122561811
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,7 +3755,6 @@ GameObject:
   - component: {fileID: 2134607784}
   - component: {fileID: 2134607783}
   - component: {fileID: 2134607782}
-  - component: {fileID: 2134607785}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -3854,9 +3826,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2134607785}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 334881315}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3904,19 +3876,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134607780}
   m_CullTransparentMesh: 1
---- !u!114 &2134607785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134607780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

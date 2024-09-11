@@ -1358,7 +1358,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 509974056}
   m_OnClick:
     m_PersistentCalls:
@@ -2125,7 +2125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &864907749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2243,7 +2243,6 @@ GameObject:
   - component: {fileID: 880980907}
   - component: {fileID: 880980906}
   - component: {fileID: 880980904}
-  - component: {fileID: 880980903}
   m_Layer: 5
   m_Name: BackBtn (1)
   m_TagString: Untagged
@@ -2270,20 +2269,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -492}
   m_SizeDelta: {x: 191.5, y: 189.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &880980903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880980901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72dd8a20b1718b3459fd521f59915e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CreditSence: {fileID: 1254446456}
-  OptionSence: {fileID: 1313814682}
 --- !u!95 &880980904
 Animator:
   serializedVersion: 5
@@ -2349,7 +2334,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880980903}
+      - m_Target: {fileID: 1254446461}
         m_TargetAssemblyTypeName: CreditButton, Assembly-CSharp
         m_MethodName: CreditBack
         m_Mode: 1
@@ -3180,6 +3165,7 @@ GameObject:
   - component: {fileID: 1603367057}
   - component: {fileID: 1603367056}
   - component: {fileID: 1603367060}
+  - component: {fileID: 1603367061}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -3322,6 +3308,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1603367061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603367054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectSence: {fileID: 864907748}
+  hardBtn: {fileID: 509974055}
+  BestScoreNow_Txt: {fileID: 703127707}
+  btnAnim: {fileID: 1603367060}
 --- !u!1 &1655905331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3413,6 @@ GameObject:
   - component: {fileID: 1704460420}
   - component: {fileID: 1704460419}
   - component: {fileID: 1704460418}
-  - component: {fileID: 1704460421}
   - component: {fileID: 1704460422}
   m_Layer: 5
   m_Name: BackBtn
@@ -3483,7 +3484,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1704460421}
+      - m_Target: {fileID: 1313814687}
         m_TargetAssemblyTypeName: CreditButton, Assembly-CSharp
         m_MethodName: OptionBack
         m_Mode: 1
@@ -3533,20 +3534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704460416}
   m_CullTransparentMesh: 1
---- !u!114 &1704460421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704460416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72dd8a20b1718b3459fd521f59915e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CreditSence: {fileID: 1254446456}
-  OptionSence: {fileID: 1313814682}
 --- !u!95 &1704460422
 Animator:
   serializedVersion: 5

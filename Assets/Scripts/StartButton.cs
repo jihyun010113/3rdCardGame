@@ -10,7 +10,7 @@ public class StartButton : MonoBehaviour
 {
     public GameObject selectSence;
     bool isHard;
-    int goalScore;
+    float goalScore;
     public Button hardBtn;
     public Text BestScoreNow_Txt;
     float bestNow;
@@ -22,6 +22,7 @@ public class StartButton : MonoBehaviour
       
     {
 
+        hardBtn.interactable = false;
         GetComponent<Animator>();
         
 
@@ -32,8 +33,8 @@ public class StartButton : MonoBehaviour
         if (PlayerPrefs.HasKey("best"))
         {
 
-            bestNow = PlayerPrefs.GetFloat("best");
-            BestScoreNow_Txt.text = bestNow.ToString("N1");
+           bestNow = PlayerPrefs.GetFloat("best");
+           BestScoreNow_Txt.text = bestNow.ToString("N1");
 
         }
 
@@ -41,6 +42,25 @@ public class StartButton : MonoBehaviour
         {
 
             BestScoreNow_Txt.text = "점수 없음";
+        }
+
+
+
+    }
+
+    public void Update()
+    {
+        goalScore = 30.0f;
+        isHard = goalScore <= bestNow;
+
+
+        if ( isHard )
+        {
+
+            
+            hardBtn.interactable = true;
+
+
         }
 
 
@@ -69,7 +89,7 @@ public class StartButton : MonoBehaviour
     {
 
 
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("StartScene");
 
 
     }
@@ -96,38 +116,8 @@ public class StartButton : MonoBehaviour
     public void Hard()
 
     {
-        
-        
 
-        float goalScore = 30;
-        
-
-
-
-
-        isHard = goalScore <= bestNow;
-
-
-
-        if (isHard)
-        {
-            hardBtn.interactable = true;
             SceneManager.LoadScene("HardScene");
-
-
-
-
-        }
-
-        else 
-        
-        
-        {
-
-            hardBtn.interactable = false;
-
-
-        }
 
 
     }
