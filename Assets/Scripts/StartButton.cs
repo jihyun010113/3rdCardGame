@@ -20,6 +20,8 @@ public class StartButton : MonoBehaviour
     public void Start()
       
     {
+        hardBtn.SetActive(false);
+
         if (PlayerPrefs.HasKey("best"))
         {
 
@@ -31,7 +33,7 @@ public class StartButton : MonoBehaviour
         else
         {
 
-            BestScoreNow_Txt.text = "0.0f";
+            BestScoreNow_Txt.text = "점수 없음";
         }
 
 
@@ -45,7 +47,7 @@ public class StartButton : MonoBehaviour
         if ( !selectSence.activeSelf )
         {
 
-
+            //PlayerPrefs.DeleteAll(); // 베스트 스코어 초기화
             selectSence.SetActive(true);
 
 
@@ -78,8 +80,8 @@ public class StartButton : MonoBehaviour
     public void Hard()
 
     {
-        hardBtn.SetActive(false);
-        int goalScore = 30;
+        
+        float goalScore = 30;
 
 
 
