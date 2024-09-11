@@ -14,8 +14,6 @@ public class EndPanel : MonoBehaviour
     float timeScore;
     float Best;
 
-
-
     void OnEnable() //활성화 될때마다 호출되는 함수
     {
         GameOver(GameManager.Instance.time_Tmp);
@@ -23,7 +21,7 @@ public class EndPanel : MonoBehaviour
 
     public void GameOver(float time)
     {
-        cardScore = GameManager.Instance.cardCount;
+        cardScore = 16 - GameManager.Instance.cardCount;
         timeScore = time * 2;
         totalScore = cardScore + timeScore;
         if (PlayerPrefs.HasKey(key))
@@ -38,14 +36,14 @@ public class EndPanel : MonoBehaviour
             }
             else
             {
-                BestScore.text = Best.ToString("N2");
+                BestScore.text = Best.ToString("N1");
             }
         }
         else
         {
             PlayerPrefs.SetFloat(key, totalScore);
-            BestScore.text = totalScore.ToString("N2");
+            BestScore.text = totalScore.ToString("N1");
         }
-        Score.text = totalScore.ToString("N2");
+        Score.text = totalScore.ToString("N1");
     }
 }

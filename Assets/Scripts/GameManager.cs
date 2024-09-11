@@ -7,9 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public LevelManager levelManager;
 
-    public EndPanel endpanel;
     public float time;
     public float time_Tmp;
 
@@ -102,7 +100,6 @@ public class GameManager : MonoBehaviour
             {
                 win.gameObject.SetActive(true);
                 Time.timeScale = 0f;
-                endpanel.GameOver(time_Tmp);
             }
         }
         else
@@ -123,7 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void Correct_Card()
     {
-        levelManager.Match_CntUp();
+        LevelManager.Instance.Match_CntUp();
         if (time_Tmp + 3f <= time)
             time_Tmp += 3f;
         else
