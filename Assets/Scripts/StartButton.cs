@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,20 +9,29 @@ using UnityEngine.UI;
 public class StartButton : MonoBehaviour
 {
     public GameObject selectSence;
-    public EndPanel endPanel; // 전역변수로 할당
     bool isHard;
     int goalScore;
     public GameObject hardBtn;
-    public Text bestNowTxt;
+    public Text BestScoreNow_Txt;
     float bestNow;
+    
 
 
     public void Start()
+      
     {
-        if (bestNow > 0)
+        if (PlayerPrefs.HasKey("best"))
         {
-            bestNow = endPanel.GetBestScore();
-            bestNowTxt.text = bestNow.ToString("N1");
+
+            bestNow = PlayerPrefs.GetFloat("best");
+            BestScoreNow_Txt.text = bestNow.ToString("N1");
+
+        }
+
+        else
+        {
+
+            BestScoreNow_Txt.text = "0.0f";
         }
 
 
@@ -32,7 +42,7 @@ public class StartButton : MonoBehaviour
     {
 
 
-        if ( selectSence.activeSelf == false)
+        if ( !selectSence.activeSelf )
         {
 
 
@@ -73,31 +83,35 @@ public class StartButton : MonoBehaviour
 
     {
         hardBtn.SetActive(false);
-        bool unLock = GetComponent<Button>().enabled = false;
-        float bestScore = endPanel.GetBestScore();
+        int goalScore = 30;
 
 
 
 
 
-        int goalScore = 30; // 하드 모드를 열려면 도달해야 하는 점수
-
-
-
-        isHard = goalScore <= bestScore;
+        isHard = goalScore <= bestNow;
 
 
 
         if (isHard)
         {
             hardBtn.SetActive(true);
-            unLock = true;
             SceneManager.LoadScene("HardScene");
-            
-        
-        
-        
+
+
+
+
         }
+
+        else 
+        
+        
+        {
+
+            Debug.Log("하드모드를 열 수 없음");
+                
+                
+                }
 
 
     }
