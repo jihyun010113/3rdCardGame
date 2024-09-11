@@ -58,6 +58,15 @@ public class StartButton : MonoBehaviour
 
     }
 
+    public void Main()
+    {
+
+
+        SceneManager.LoadScene("MainScene");
+
+
+    }
+
     public void Easy()
     {
 
