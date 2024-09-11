@@ -1,11 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour
 {
     public GameObject selectSence;
+    public EndPanel endPanel; // 전역변수로 할당
+    bool isHard;
+    int goalScore;
+    public GameObject hardBtn;
+    public Text bestNowTxt;
+    float bestNow;
+
+
+    public void Start()
+    {
+        bestNow = endPanel.GetBestScore();
+        bestNowTxt.text = bestNow.ToString("N1");
+
+    }
 
     public void StageSelect()
     {
@@ -47,9 +63,32 @@ public class StartButton : MonoBehaviour
     public void Hard()
 
     {
+       
+        bool unLock = GetComponent<Button>().enabled = false;
+        float bestScore = endPanel.GetBestScore();
 
 
-        SceneManager.LoadScene("HardScene");
+
+
+
+        int goalScore = 30; // 하드 모드를 열려면 도달해야 하는 점수
+
+
+
+        isHard = goalScore <= bestScore;
+
+
+
+        if (isHard)
+        {
+            hardBtn.SetActive(true);
+            unLock = true;
+            SceneManager.LoadScene("HardScene");
+            
+        
+        
+        
+        }
 
 
     }
@@ -71,6 +110,8 @@ public class StartButton : MonoBehaviour
 
 
     }
+
+
 
 
 }

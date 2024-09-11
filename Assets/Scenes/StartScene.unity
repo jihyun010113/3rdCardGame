@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
+  endPanel: {fileID: 0}
 --- !u!114 &1445596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
+  endPanel: {fileID: 0}
 --- !u!114 &263718468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,6 +1133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
+  endPanel: {fileID: 0}
 --- !u!114 &481641241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,6 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
+  endPanel: {fileID: 0}
 --- !u!114 &509974055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,7 +1662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
+  selectSence: {fileID: 864907748}
+  endPanel: {fileID: 0}
 --- !u!114 &636842419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,7 +2041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &864907749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,6 +2219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
+  endPanel: {fileID: 0}
 --- !u!114 &880980906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,6 +3230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
+  endPanel: {fileID: 0}
 --- !u!95 &1603367060
 Animator:
   serializedVersion: 5
@@ -4184,6 +4191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
+  endPanel: {fileID: 0}
 --- !u!114 &2112353637
 MonoBehaviour:
   m_ObjectHideFlags: 0

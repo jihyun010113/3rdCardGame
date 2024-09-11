@@ -12,7 +12,7 @@ public class EndPanel : MonoBehaviour
     int cardScore;
     float totalScore;
     float timeScore;
-    float Best;
+    public float Best;
 
     void OnEnable() //활성화 될때마다 호출되는 함수
     {
@@ -45,5 +45,15 @@ public class EndPanel : MonoBehaviour
             BestScore.text = totalScore.ToString("N1");
         }
         Score.text = totalScore.ToString("N1");
+    }
+
+    public float GetBestScore() // 베스트 스코어를 반환하는 함수
+    {
+
+
+
+        return Best;
+
+
     }
 }
