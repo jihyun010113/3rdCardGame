@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
     }
     public void ObstacleSign() //장애물 실행시 사인표출
     {
-        Invoke("ObstacleSignOnOff", 4f);
+        //Invoke("ObstacleSignOnOff", 4f);
         warningSign.SetActive(true);        
         warningSignAnim.SetBool("isWarning", true);
         RequesteBack.SetActive(false);

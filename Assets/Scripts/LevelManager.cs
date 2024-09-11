@@ -99,6 +99,8 @@ public class LevelManager : MonoBehaviour
         }
         board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         obstacle_arr[0] = 0;
+
+        GameManager.Instance.ObstacleSignOnOff();
     }
 
     public void Curtain_Time()
@@ -111,6 +113,7 @@ public class LevelManager : MonoBehaviour
     {
         timeCurtain.gameObject.SetActive(false);
         obstacle_arr[1] = 1;
+        GameManager.Instance.ObstacleSignOnOff();
     }
 
     public void Crow()
@@ -122,5 +125,6 @@ public class LevelManager : MonoBehaviour
     {
         crow.gameObject.SetActive(false);
         obstacle_arr[2] = 2;
+        GameManager.Instance.ObstacleSignOnOff();
     }
 }

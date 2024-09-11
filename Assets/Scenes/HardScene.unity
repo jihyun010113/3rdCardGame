@@ -3892,7 +3892,7 @@ MonoBehaviour:
   win: {fileID: 1719724137}
   lose: {fileID: 298134616}
   RequesteBack: {fileID: 329893715}
-  warningSign: {fileID: 1275365663}
+  warningSign: {fileID: 1885174103}
   warningSignAnim: {fileID: 1885174104}
   clip: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
   firstCard: {fileID: 0}
