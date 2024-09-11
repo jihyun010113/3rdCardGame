@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     public Card secondCard;
     public int cardCount;
 
-
+    int sceneIndex;
 
     private void Awake()
     {
@@ -54,17 +55,31 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = 30f;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(sceneIndex);
+
+        if(sceneIndex == 3)
+        {
+            time = 35f;
+        }
+        else if (sceneIndex == 2)
+        {
+            time = 30f;
+        }
+        else if (sceneIndex == 1)
+        {
+            time = 25f;
+        }
         time_Tmp = time;
 
         audioSource = GetComponent<AudioSource>();
         RequesteBack.SetActive(true);//카드를 맞춰주세요 켜기(기본)   
+
     }
 
     // Update is called once per frame
     void Update()
     {           
-
         if (time_Tmp > 0)
         {
             time_Tmp -= Time.deltaTime;
@@ -134,12 +149,24 @@ public class GameManager : MonoBehaviour
 
     public void Wrong_Card()
     {
-        time_Tmp -= 1f;
+        if (sceneIndex == 3)
+        {
+            time_Tmp -= 1f;
+        }
+        else if (sceneIndex == 2)
+        {
+            time_Tmp -= 1.5f;
+        }
+        else if (sceneIndex == 1)
+        {
+            time_Tmp -= 2f;
+        }
     }
 
     public void Correct_Card()
     {
-        LevelManager.Instance.Match_CntUp();
+        if(sceneIndex != 3)
+            LevelManager.Instance.Match_CntUp();
         if (time_Tmp + 3f <= time)
             time_Tmp += 3f;
         else
