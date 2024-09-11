@@ -593,9 +593,6 @@ MonoBehaviour:
   timeCurtain: {fileID: 736952731}
   camera: {fileID: 2129481357}
   crow: {fileID: 1842321941}
-  RequesteBack: {fileID: 1222302424}
-  WarningSign: {fileID: 1588505905}
-  warningSignAnim: {fileID: 1588505907}
   isObstacle: 0
 --- !u!4 &161922305
 Transform:
@@ -1768,6 +1765,8 @@ MonoBehaviour:
   win: {fileID: 320752077}
   lose: {fileID: 1731816932}
   RequesteBack: {fileID: 1222302424}
+  warningSign: {fileID: 1588505905}
+  warningSignAnim: {fileID: 1588505907}
   timeCurtain: {fileID: 736952731}
   camera: {fileID: 2129481357}
   clip: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
@@ -2088,7 +2087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1222302425
 RectTransform:
   m_ObjectHideFlags: 0

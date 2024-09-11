@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
         time_Tmp = time;
 
         audioSource = GetComponent<AudioSource>();
+        RequesteBack.SetActive(true);//카드를 맞춰주세요 켜기(기본)   
     }
 
     // Update is called once per frame
     void Update()
-    {
-        RequesteBack.SetActive(true);//카드를 맞춰주세요 켜기(기본)
+    {           
 
         if (time_Tmp > 0)
         {
@@ -88,17 +88,19 @@ public class GameManager : MonoBehaviour
             //AudioManager.Instance.audioSource.Stop();
             AudioManager.Instance.audioSource.Play();
         }
-        if (!LevelManager.Instance.isObstacle)
-        {
-            ObstacleSign();
-        }
     }
     public void ObstacleSign() //장애물 실행시 사인표출
     {
-        //방해요소 3가지가 100%로 작동하고 있다.
-        warningSign.SetActive(true);
-        RequesteBack.SetActive(false);
+        Invoke("ObstacleSignOnOff", 4f);
+        warningSign.SetActive(true);        
         warningSignAnim.SetBool("isWarning", true);
+        RequesteBack.SetActive(false);
+    }
+    public void ObstacleSignOnOff() //장애물 실행시 사인표출
+    {        
+        warningSign.SetActive(false);
+        warningSignAnim.SetBool("isWarning", false);
+        RequesteBack.SetActive(true);
     }
 
     public void Matched()
