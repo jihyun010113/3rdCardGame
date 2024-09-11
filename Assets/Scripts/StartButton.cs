@@ -11,16 +11,23 @@ public class StartButton : MonoBehaviour
     public GameObject selectSence;
     bool isHard;
     int goalScore;
-    public GameObject hardBtn;
+    public Button hardBtn;
     public Text BestScoreNow_Txt;
     float bestNow;
+    public Animator btnAnim;
     
 
 
     public void Start()
       
     {
-        hardBtn.SetActive(false);
+
+        GetComponent<Animator>();
+        
+
+
+
+
 
         if (PlayerPrefs.HasKey("best"))
         {
@@ -90,8 +97,10 @@ public class StartButton : MonoBehaviour
 
     {
         
-        float goalScore = 30;
+        
 
+        float goalScore = 30;
+        
 
 
 
@@ -102,7 +111,7 @@ public class StartButton : MonoBehaviour
 
         if (isHard)
         {
-            hardBtn.SetActive(true);
+            hardBtn.interactable = true;
             SceneManager.LoadScene("HardScene");
 
 
@@ -115,10 +124,10 @@ public class StartButton : MonoBehaviour
         
         {
 
-            Debug.Log("하드모드를 열 수 없음");
-                
-                
-                }
+            hardBtn.interactable = false;
+
+
+        }
 
 
     }
