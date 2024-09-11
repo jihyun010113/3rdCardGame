@@ -4,24 +4,13 @@ using UnityEngine;
 //레벨메니저
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
     public int match_cnt;
 
     public int[] obstacle_arr = { 0, 1 };
     public GameObject timeCurtain;
     public Camera camera;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
+
     private void Start()
     {
         match_cnt = 0;
