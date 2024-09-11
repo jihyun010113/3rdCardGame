@@ -13,9 +13,13 @@ public class GameManager : MonoBehaviour
     public float time_Tmp;
     public Text time_Txt;
 
+
     public RectTransform timeLimit;
     public GameObject win;
     public GameObject lose;
+    public GameObject RequesteBack;
+    public GameObject warningSign;
+    public Animator warningSignAnim;
 
     public GameObject timeCurtain;
     public Camera camera;
@@ -25,12 +29,12 @@ public class GameManager : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip clip;
-    
+
 
     public Card firstCard;
     public Card secondCard;
     public int cardCount;
-        
+
 
 
     private void Awake()
@@ -59,6 +63,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RequesteBack.SetActive(true);//카드를 맞춰주세요 켜기(기본)
+
         if (time_Tmp > 0)
         {
             time_Tmp -= Time.deltaTime;
@@ -70,25 +76,31 @@ public class GameManager : MonoBehaviour
             //게임 오버
             Time.timeScale = 0;
             lose.gameObject.SetActive(true);
+            RequesteBack.SetActive(false); //카드를 맞춰주세요 끄기
         }
         time_Txt.text = time_Tmp.ToString("N1");
 
-        if (isHurry == false && time_Tmp <= 10f ) // Time 10초미만일때 조급한 브금
+        if (isHurry == false && time_Tmp <= 10f) // Time 10초미만일때 조급한 브금
         {
-            isHurry = true; // 스위치가 켜짐
+            isHurry = true; // 스위치가 켜짐            
 
-            
-           
             AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
             //AudioManager.Instance.audioSource.Stop();
             AudioManager.Instance.audioSource.Play();
-
-            
-
+        }
+        if (!LevelManager.Instance.isObstacle)
+        {
+            ObstacleSign();
         }
     }
+    public void ObstacleSign() //장애물 실행시 사인표출
+    {
+        //방해요소 3가지가 100%로 작동하고 있다.
+        warningSign.SetActive(true);
+        RequesteBack.SetActive(false);
+        warningSignAnim.SetBool("isWarning", true);
+    }
 
- 
     public void Matched()
     {
         if (firstCard.idx == secondCard.idx)
@@ -102,6 +114,8 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                 win.gameObject.SetActive(true);
+                RequesteBack.gameObject.SetActive(false);//카드를 맞춰주세요 끄기
+
                 Time.timeScale = 0f;
             }
         }

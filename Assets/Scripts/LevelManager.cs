@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if (obstacle_arr[0] == 100 && obstacle_arr[1] == 100 && obstacle_arr[2] == 100)
+        if (obstacle_arr[0] == 100 && obstacle_arr[1] == 100 && obstacle_arr[2] == 100) //방해요소 3가지가 100%로 작동하고 있다.
             isObstacle = false;
         else
             isObstacle = true;
