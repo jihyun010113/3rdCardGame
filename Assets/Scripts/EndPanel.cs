@@ -9,39 +9,43 @@ public class EndPanel : MonoBehaviour
     public Text Score;
     public Text BestScore;
     string key = "best";
+    int cardScore;
+    float totalScore;
+    float timeScore;
+    float Best;
 
-    
+
 
     void OnEnable() //활성화 될때마다 호출되는 함수
     {
-        
+        GameOver(GameManager.Instance.time_Tmp);
     }
 
     public void GameOver(float time)
     {
-        
-        Score.text = time.ToString("N2");
+        cardScore = GameManager.Instance.cardCount;
+        timeScore = time * 2;
+        totalScore = cardScore + timeScore;
         if (PlayerPrefs.HasKey(key))
         {
-            float Best = PlayerPrefs.GetFloat(key);
-            if (Best < time)
+            Best = PlayerPrefs.GetFloat(key);
+            if (Best < totalScore)
             {
-                PlayerPrefs.SetFloat(key, time);
-                int cardScore = GameManager.Instance.cardCount;
-                float timeScore = time *2;
+                PlayerPrefs.SetFloat(key, totalScore);
 
-                BestScore.text = $"{cardScore+timeScore}"; //보간문자열
-
+                BestScore.text = $"{cardScore + timeScore}"; //보간문자열
+                //ctrl k+d 꿀팁
             }
             else
             {
                 BestScore.text = Best.ToString("N2");
             }
         }
-        else 
+        else
         {
-            PlayerPrefs.SetFloat (key, time);
-            BestScore.text = time.ToString("N2");
+            PlayerPrefs.SetFloat(key, totalScore);
+            BestScore.text = totalScore.ToString("N2");
         }
+        Score.text = totalScore.ToString("N2");
     }
 }

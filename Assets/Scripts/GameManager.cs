@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public EndPanel endpanel;
     public float time;
-    float time_Tmp;
+    public float time_Tmp;
 
     public RectTransform timeLimit;
     public GameObject win;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public Card firstCard;
     public Card secondCard;
-    public int cardCount = 0;
+    public int cardCount;
         
 
 
@@ -97,8 +97,8 @@ public class GameManager : MonoBehaviour
             firstCard.DestroyCard();
             secondCard.DestroyCard();
 
-            cardCount += 2;
-            if (cardCount == 16)
+            cardCount -= 2;
+            if (cardCount == 0)
             {
                 win.gameObject.SetActive(true);
                 Time.timeScale = 0f;

@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -248,7 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
+  endpanel: {fileID: 0}
   time: 0
+  time_Tmp: 0
   timeLimit: {fileID: 1344048951}
   win: {fileID: 1805468974}
   lose: {fileID: 336641026}
@@ -412,7 +414,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -491,7 +493,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -654,7 +656,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -854,7 +856,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -933,7 +935,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1086,6 +1088,7 @@ GameObject:
   - component: {fileID: 336641027}
   - component: {fileID: 336641029}
   - component: {fileID: 336641028}
+  - component: {fileID: 336641030}
   m_Layer: 5
   m_Name: Lose
   m_TagString: Untagged
@@ -1158,6 +1161,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336641026}
   m_CullTransparentMesh: 1
+--- !u!114 &336641030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336641026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7b0e52901f3ec4ea9611846facb669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 992905395}
+  BestScore: {fileID: 101796414}
 --- !u!1 &411887653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1233,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1469,7 +1486,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1652,7 +1669,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1731,7 +1748,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1810,7 +1827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1831,6 +1848,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175010033}
   m_CullTransparentMesh: 1
+--- !u!1 &1203129853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203129856}
+  - component: {fileID: 1203129855}
+  - component: {fileID: 1203129854}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1203129854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203129853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1203129855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203129853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1203129856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203129853}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344048950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +2049,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 160
     m_FontStyle: 0
     m_BestFit: 0
@@ -2043,7 +2128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -2139,6 +2224,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530186965}
   m_CullTransparentMesh: 1
+--- !u!1 &1747915176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747915178}
+  - component: {fileID: 1747915177}
+  m_Layer: 0
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1747915177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747915176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca63df3216a32f49be0485c2c341f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 9083362485355887413, guid: 1da1034fc38620446be2c0e8e6d5d6f4, type: 3}
+--- !u!4 &1747915178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747915176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805468974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2280,7 @@ GameObject:
   - component: {fileID: 1805468975}
   - component: {fileID: 1805468977}
   - component: {fileID: 1805468976}
+  - component: {fileID: 1805468978}
   m_Layer: 5
   m_Name: Win
   m_TagString: Untagged
@@ -2222,6 +2353,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805468974}
   m_CullTransparentMesh: 1
+--- !u!114 &1805468978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805468974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7b0e52901f3ec4ea9611846facb669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 790312779}
+  BestScore: {fileID: 729468900}
 --- !u!1 &1837561740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2592,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 220
     m_FontStyle: 0
     m_BestFit: 0
@@ -2716,5 +2861,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1837561743}
   - {fileID: 778610604}
+  - {fileID: 1747915178}
   - {fileID: 85208226}
   - {fileID: 138742103}
+  - {fileID: 1203129856}
