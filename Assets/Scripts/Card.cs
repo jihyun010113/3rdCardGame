@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEditor.Experimental.GraphView;
 
 public class Card : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Card : MonoBehaviour
     public Sprite[] randomImages;
     public GameObject front;
     public GameObject back;
-    public Animator anim;    
+    public Animator anim;
 
     AudioSource audioSource;
     public AudioClip clip;
@@ -25,21 +26,21 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-               
+
     }
     public void ImageSetting(int number)
     {
         idx = number;
         frontImage.sprite = randomImages[idx];
     }
-    public void FirstOpenCard() 
+    public void FirstOpenCard()
     {
         front.SetActive(true);
         back.SetActive(false);
         Invoke("FirstCloseCard", 1f);
     }
-    public void FirstCloseCard() 
-    {        
+    public void FirstCloseCard()
+    {
         front.SetActive(false);
         back.SetActive(true);
     }
@@ -54,11 +55,17 @@ public class Card : MonoBehaviour
         {
             GameManager.Instance.firstCard = this;
         }
-        else
+        else if(GameManager.Instance.secondCard == null)
         {
             GameManager.Instance.secondCard = this;
             GameManager.Instance.Matched();
         }       
+        else if (GameManager.Instance.secondCard != null)
+        {
+            anim.SetBool("isOpen", false);
+            front.SetActive(false);
+            back.SetActive(true);
+        }
     }
     public void DestroyCard()
     {
@@ -78,5 +85,5 @@ public class Card : MonoBehaviour
         front.SetActive(false);
         back.SetActive(true);
     }
-    
+
 }
