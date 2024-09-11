@@ -23,6 +23,7 @@ public class StartButton : MonoBehaviour
     {
        //PlayerPrefs.DeleteAll(); // 베스트 스코어 초기화
         Time.timeScale = 1; // 타임스케일 초기화
+        
 
         hardBtn.interactable = false;
         

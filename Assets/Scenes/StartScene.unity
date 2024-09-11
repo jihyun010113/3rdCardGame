@@ -3339,9 +3339,9 @@ MonoBehaviour:
   audioSlider: {fileID: 1846333121}
   OpenSound: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
   MactchSound: {fileID: 8300000, guid: 2a4e8e97ff4021844ae384a942b9a2d7, type: 3}
-  MissMactchSound: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
-  BackGorundMusic: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
-  HurryUpMusic: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
+  MissMactchSound: {fileID: 8300000, guid: a3f7e9e3f7f8e554f89af7f0f3f1008c, type: 3}
+  BackGorundMusic: {fileID: 8300000, guid: 3814df674bc9cca4b8438ec1de1e7dd2, type: 3}
+  HurryUpMusic: {fileID: 8300000, guid: 418038ff6dadebf4ab9d8ed5f941de75, type: 3}
   audioSource: {fileID: 1359508517}
 --- !u!4 &1359508516
 Transform:

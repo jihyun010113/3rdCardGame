@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip MissMactchSound;
     public AudioClip BackGorundMusic;
     public AudioClip HurryUpMusic;
+    
 
     public AudioSource audioSource;
 
@@ -37,12 +38,15 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = this.BackGorundMusic; //ºê±Ý
         audioSource.Play();
+        
 
 
     }
@@ -70,12 +74,23 @@ public class AudioManager : MonoBehaviour
     
     {
 
+
         float sound = audioSlider.value;
 
         if (sound == -40f) masterMixer.SetFloat("Master", -80);
         else masterMixer.SetFloat("Master", sound);
     
     
+    }
+
+    public void GameOver()
+
+    {
+
+        audioSource.clip = this.BackGorundMusic;
+        audioSource.Play();
+
+
     }
 
 
