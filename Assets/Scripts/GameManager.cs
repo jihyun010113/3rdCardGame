@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public float time;
     public float time_Tmp;
+    public Text time_Txt;
 
     public RectTransform timeLimit;
     public GameObject win;
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             lose.gameObject.SetActive(true);
         }
+        time_Txt.text = time_Tmp.ToString("N1");
 
         if (isHurry == false && time_Tmp <= 10f ) // Time 10초미만일때 조급한 브금
         {
