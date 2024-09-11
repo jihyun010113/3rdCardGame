@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void Obstacle()
+    public void Obstacle() // 중복방지
     {
         int ran_Obstacle;
         do
