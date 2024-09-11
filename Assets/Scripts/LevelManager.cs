@@ -10,10 +10,12 @@ public class LevelManager : MonoBehaviour
 
     public int[] obstacle_arr;
     public GameObject timeCurtain;
-    public Camera camera;
+    public Board board;
     public GameObject crow;
 
     public bool isObstacle;
+
+    int sceneIndex;
     private void Awake()
     {
         if (Instance == null)
@@ -67,7 +69,7 @@ public class LevelManager : MonoBehaviour
         obstacle_arr[ran_Obstacle] = 100;
 
         if (ran_Obstacle == 0)
-            CameraRotation();
+            BoardRotation();
         else if (ran_Obstacle == 1)
             Curtain_Time();
         else if (ran_Obstacle == 2)
@@ -75,22 +77,27 @@ public class LevelManager : MonoBehaviour
     }
 
     //장애물 관련
-    public void CameraRotation()
+    public void BoardRotation()
     {
-        StartCoroutine("CameraRotation_Coroutine");
+        StartCoroutine("BoardRotation_Coroutine");
     }
-    IEnumerator CameraRotation_Coroutine()
+    IEnumerator BoardRotation_Coroutine()
     {
-        camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         for (int i = 0; i < 180; i++)
         {
-            camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, i);
+            board.gameObject.transform.rotation = Quaternion.Euler(0, i, 0);
             yield return new WaitForSeconds(0.005f);
         }
-        camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+        board.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
 
         yield return new WaitForSeconds(3f);
-        camera.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        for (int i = 0; i < 180; i++)
+        {
+            board.gameObject.transform.rotation = Quaternion.Euler(0, 180 -i, 0);
+            yield return new WaitForSeconds(0.005f);
+        }
+        board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         obstacle_arr[0] = 0;
     }
 
