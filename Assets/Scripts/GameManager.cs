@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject warningSign;
     public Animator warningSignAnim;
 
-    public GameObject timeCurtain;
-    public Camera camera;
+    /*public GameObject timeCurtain;
+    public Camera camera;*/
 
 
     bool isHurry = false;
