@@ -199,6 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 0}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &1445596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +536,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 0}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &263718468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,6 +1138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 509974051}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &481641241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,6 +1385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 509974051}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &509974055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,6 +1672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 509974051}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &636842419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,6 +2230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 0}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &880980906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3231,6 +3243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 864907748}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 0}
+  bestNowTxt: {fileID: 0}
 --- !u!95 &1603367060
 Animator:
   serializedVersion: 5
@@ -4192,6 +4206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSence: {fileID: 0}
   endPanel: {fileID: 0}
+  hardBtn: {fileID: 0}
+  bestNowTxt: {fileID: 0}
 --- !u!114 &2112353637
 MonoBehaviour:
   m_ObjectHideFlags: 0

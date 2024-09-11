@@ -63,7 +63,7 @@ public class StartButton : MonoBehaviour
     public void Hard()
 
     {
-       
+        hardBtn.SetActive(false);
         bool unLock = GetComponent<Button>().enabled = false;
         float bestScore = endPanel.GetBestScore();
 
