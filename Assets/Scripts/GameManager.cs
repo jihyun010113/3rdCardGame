@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
 
     public RectTransform timeLimit;
+    public GameObject card;
     public GameObject win;
     public GameObject lose;
     public GameObject RequesteBack;
@@ -129,8 +130,9 @@ public class GameManager : MonoBehaviour
         }
 
         firstCard = null;
-        secondCard = null;
+        secondCard = null;        
     }
+    
 
     public void Wrong_Card()
     {
