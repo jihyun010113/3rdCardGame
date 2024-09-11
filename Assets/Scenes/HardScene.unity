@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 570963251}
   BestScore: {fileID: 2063016172}
+  Best: 0
 --- !u!114 &298134619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,7 +1549,6 @@ GameObject:
   - component: {fileID: 982173481}
   - component: {fileID: 982173480}
   - component: {fileID: 982173479}
-  - component: {fileID: 982173482}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -1620,9 +1620,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 982173482}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 1039024788}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1670,19 +1670,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982173477}
   m_CullTransparentMesh: 1
---- !u!114 &982173482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982173477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1014605400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,8 +1805,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1039024788}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Hard
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReHard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1876,10 +1863,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039024783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
+  m_Script: {fileID: 11500000, guid: b757598b65c75b54ea7e26c3eafe0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1207491187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +1991,6 @@ GameObject:
   - component: {fileID: 1321823690}
   - component: {fileID: 1321823689}
   - component: {fileID: 1321823688}
-  - component: {fileID: 1321823691}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -2077,9 +2062,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321823691}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 1039024788}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2127,19 +2112,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321823686}
   m_CullTransparentMesh: 1
---- !u!114 &1321823691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321823686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1382551808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 1875344478}
   BestScore: {fileID: 1742052057}
+  Best: 0
 --- !u!114 &1719724140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3760,7 +3733,6 @@ GameObject:
   - component: {fileID: 1950767970}
   - component: {fileID: 1950767969}
   - component: {fileID: 1950767968}
-  - component: {fileID: 1950767971}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -3832,9 +3804,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1950767971}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Hard
+      - m_Target: {fileID: 1039024788}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReHard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3882,19 +3854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950767966}
   m_CullTransparentMesh: 1
---- !u!114 &1950767971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950767966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1989838759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +3888,7 @@ MonoBehaviour:
   time_Tmp: 0
   time_Txt: {fileID: 1382551810}
   timeLimit: {fileID: 153086610}
+  card: {fileID: 0}
   win: {fileID: 1719724137}
   lose: {fileID: 298134616}
   RequesteBack: {fileID: 329893715}

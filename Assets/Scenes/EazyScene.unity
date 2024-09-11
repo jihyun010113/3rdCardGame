@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -908,7 +908,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1492,8 +1492,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 950805806}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Easy
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReEasy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1550,10 +1550,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 950805801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
+  m_Script: {fileID: 11500000, guid: b757598b65c75b54ea7e26c3eafe0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1007320812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1565,6 @@ GameObject:
   - component: {fileID: 1007320816}
   - component: {fileID: 1007320815}
   - component: {fileID: 1007320814}
-  - component: {fileID: 1007320817}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -1638,9 +1636,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1007320817}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 950805806}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1688,19 +1686,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007320812}
   m_CullTransparentMesh: 1
---- !u!114 &1007320817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007320812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1066880702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1799,7 @@ MonoBehaviour:
   time_Tmp: 0
   time_Txt: {fileID: 292604476}
   timeLimit: {fileID: 1912349711}
+  card: {fileID: 0}
   win: {fileID: 320752077}
   lose: {fileID: 1731816932}
   RequesteBack: {fileID: 1222302424}
@@ -2611,7 +2597,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -2644,7 +2630,6 @@ GameObject:
   - component: {fileID: 1506435225}
   - component: {fileID: 1506435224}
   - component: {fileID: 1506435223}
-  - component: {fileID: 1506435226}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -2716,9 +2701,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1506435226}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Main
+      - m_Target: {fileID: 950805806}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2766,19 +2751,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506435221}
   m_CullTransparentMesh: 1
---- !u!114 &1506435226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506435221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1557403688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,7 +2937,6 @@ GameObject:
   - component: {fileID: 1631993020}
   - component: {fileID: 1631993019}
   - component: {fileID: 1631993018}
-  - component: {fileID: 1631993021}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -3037,9 +3008,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631993021}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: Easy
+      - m_Target: {fileID: 950805806}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: ReEasy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3087,19 +3058,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631993016}
   m_CullTransparentMesh: 1
---- !u!114 &1631993021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631993016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc38eb2cfaf31f4a81ce89293c2c3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectSence: {fileID: 0}
 --- !u!1 &1652700903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3497,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -3697,7 +3655,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9718ffca6d1445f479dda57885ff1de3, type: 3}
+    m_Font: {fileID: 12800000, guid: 2aa62e0303a0e42439fcdb4a9647e3b9, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
