@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public GameObject crow;
 
     public bool isObstacle;
+
+    int sceneIndex;
     private void Awake()
     {
         if (Instance == null)
