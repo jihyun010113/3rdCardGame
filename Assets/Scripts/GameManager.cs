@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
         Time.timeScale = 1f;
     }
 
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     {
         time = 30f;
         time_Tmp = time;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -72,11 +75,13 @@ public class GameManager : MonoBehaviour
         {
             isHurry = true; // 스위치가 켜짐
 
-            Debug.Log("조급함 실행됨");
+            
            
             AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
             //AudioManager.Instance.audioSource.Stop();
             AudioManager.Instance.audioSource.Play();
+
+            
 
         }
     }

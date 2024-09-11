@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//레벨메니저
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
     public void Match_CntUp()
     {
+        //asdf
         match_cnt++;
         if (match_cnt >= 2)
         {
