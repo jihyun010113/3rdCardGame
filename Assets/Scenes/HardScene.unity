@@ -1730,7 +1730,7 @@ MonoBehaviour:
   match_cnt: 0
   obstacle_arr: 000000000100000002000000
   timeCurtain: {fileID: 464022136}
-  camera: {fileID: 1935313860}
+  board: {fileID: 1431705050}
   crow: {fileID: 265227676}
   isObstacle: 0
 --- !u!1 &1039024783
@@ -2258,7 +2258,7 @@ Transform:
   m_GameObject: {fileID: 1431705049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.429768, y: -20.949001, z: -0.20283285}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3934,8 +3934,6 @@ MonoBehaviour:
   RequesteBack: {fileID: 329893715}
   warningSign: {fileID: 1275365663}
   warningSignAnim: {fileID: 1885174104}
-  timeCurtain: {fileID: 464022136}
-  camera: {fileID: 1935313860}
   clip: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}

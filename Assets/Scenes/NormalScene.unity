@@ -340,8 +340,6 @@ MonoBehaviour:
   RequesteBack: {fileID: 1781825541}
   warningSign: {fileID: 535034784}
   warningSignAnim: {fileID: 535034785}
-  timeCurtain: {fileID: 1853346334}
-  camera: {fileID: 1837561742}
   clip: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
@@ -2188,7 +2186,7 @@ MonoBehaviour:
   match_cnt: 0
   obstacle_arr: 000000000100000002000000
   timeCurtain: {fileID: 1853346334}
-  camera: {fileID: 1837561742}
+  board: {fileID: 1747915177}
   crow: {fileID: 718837543}
   isObstacle: 0
 --- !u!4 &902856673

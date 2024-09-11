@@ -90,6 +90,11 @@ public class LevelManager : MonoBehaviour
         board.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
 
         yield return new WaitForSeconds(3f);
+        for (int i = 0; i < 180; i++)
+        {
+            board.gameObject.transform.rotation = Quaternion.Euler(0, 180 -i, 0);
+            yield return new WaitForSeconds(0.005f);
+        }
         board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         obstacle_arr[0] = 0;
     }
