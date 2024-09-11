@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
     public GameObject timeCurtain;
     public Camera camera;
     public GameObject crow;
+
+    public bool isObstacle;
     private void Awake()
     {
         if (Instance == null)
@@ -30,13 +32,21 @@ public class LevelManager : MonoBehaviour
         obstacle_arr = new int[3] { 0, 1, 2 };
     }
 
+    private void Update()
+    {
+        if (obstacle_arr[0] == 100 && obstacle_arr[1] == 100 && obstacle_arr[2] == 100)
+            isObstacle = false;
+        else
+            isObstacle = true;
+    }
+
     public void Match_CntUp()
     {
         //asdf
         match_cnt++;
         if (match_cnt >= 2)
         {
-            if(obstacle_arr[0] != 100 || obstacle_arr[1] != 100 || obstacle_arr[2] != 100)
+            if(isObstacle == true)
             {
                 match_cnt = 0;
                 Obstacle();
