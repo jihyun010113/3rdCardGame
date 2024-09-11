@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
             isHurry = true; // 스위치가 켜짐
 
             
+
            
             AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
             //AudioManager.Instance.audioSource.Stop();
