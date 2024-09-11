@@ -56,6 +56,8 @@ public class LevelManager : MonoBehaviour
 
     public void Obstacle() // 중복방지
     {
+        GameManager.Instance.ObstacleSign();     
+
         int ran_Obstacle;
         do
         {
