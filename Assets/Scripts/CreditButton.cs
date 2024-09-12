@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class CreditButton : MonoBehaviour
 {
-
     public GameObject CreditSence;
     public GameObject OptionSence;
+
+    public GameObject sliderParent;
 
     /*private void Update()
     {
@@ -46,16 +47,22 @@ public class CreditButton : MonoBehaviour
 
     public void Option()
     {
-
+        AudioManager.Instance.audioSlider = sliderParent.GetComponentInChildren<Slider>();
 
         if (OptionSence.activeSelf == false)
         {
-
+            AudioManager.Instance.audioSlider.value = AudioManager.Instance.sound;
             OptionSence.SetActive(true);
-
-
         }
 
+    }
+
+    public void AudioControl()
+    {
+        AudioManager.Instance.sound = AudioManager.Instance.audioSlider.value;
+
+        if (AudioManager.Instance.sound == -40f) AudioManager.Instance.masterMixer.SetFloat("Master", -80);
+        else AudioManager.Instance.masterMixer.SetFloat("Master", AudioManager.Instance.sound);
     }
 
     public void OptionBack()
