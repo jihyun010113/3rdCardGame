@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
             {
                 isOver = true;
                 Debug.Log("isover");
-                AudioManager.Instance.audioSource.clip = AudioManager.Instance.BackGorundMusic;
+                AudioManager.Instance.audioSource.clip = AudioManager.Instance.EndPanelSound;
                 AudioManager.Instance.audioSource.Stop();
                 AudioManager.Instance.audioSource.Play();
 

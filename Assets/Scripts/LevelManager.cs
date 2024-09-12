@@ -42,16 +42,22 @@ public class LevelManager : MonoBehaviour
             isObstacle = true;
     }
 
-    
+    public void Match_CntUp()
+    {
+        //asdf
+        match_cnt++;
+        if (match_cnt >= 2)
+        {
+            if(isObstacle == true)
+            {
+                match_cnt = 0;
+                Obstacle();
+            }
+        }
+    }
 
     public void Obstacle() // 중복방지
     {
-        if (isObstacle == false || GameManager.Instance.sceneIndex == 3)
-        {
-            Debug.Log("안됨");
-            return;
-        }
-
         GameManager.Instance.ObstacleSign();     
 
         int ran_Obstacle;
@@ -79,7 +85,7 @@ public class LevelManager : MonoBehaviour
     {
         board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         for (int i = 0; i < 180; i++)
-        {       
+        {
             board.gameObject.transform.rotation = Quaternion.Euler(0, i, 0);
             yield return new WaitForSeconds(0.005f);
         }

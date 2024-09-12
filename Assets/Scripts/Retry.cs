@@ -11,7 +11,8 @@ public class Retry : MonoBehaviour
     {
 
 
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene(0);
+        AudioManager.Instance.ChangeBGM(0);
 
 
     }
@@ -20,7 +21,8 @@ public class Retry : MonoBehaviour
     {
 
 
-        SceneManager.LoadScene("EazyScene");
+        SceneManager.LoadScene(3);
+        AudioManager.Instance.ChangeBGM(3);
 
 
     }
@@ -29,7 +31,8 @@ public class Retry : MonoBehaviour
 
     {
 
-        SceneManager.LoadScene("NormalScene");
+        SceneManager.LoadScene(2);
+        AudioManager.Instance.ChangeBGM(2);
 
 
 
@@ -41,7 +44,8 @@ public class Retry : MonoBehaviour
 
 
 
-        SceneManager.LoadScene("HardScene");
+        SceneManager.LoadScene(1);
+        AudioManager.Instance.ChangeBGM(1);
 
 
 
