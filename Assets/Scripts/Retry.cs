@@ -10,18 +10,14 @@ public class Retry : MonoBehaviour
     public void ReMain()
     {
 
-
         SceneManager.LoadScene("StartScene");
-
 
     }
 
     public void ReEasy()
     {
 
-
         SceneManager.LoadScene("EazyScene");
-
 
     }
 
@@ -31,19 +27,13 @@ public class Retry : MonoBehaviour
 
         SceneManager.LoadScene("NormalScene");
 
-
-
     }
 
     public void ReHard()
 
     {
 
-
-
         SceneManager.LoadScene("HardScene");
-
-
 
     }
 
