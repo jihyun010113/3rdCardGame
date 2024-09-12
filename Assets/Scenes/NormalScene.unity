@@ -345,6 +345,7 @@ MonoBehaviour:
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
   cardCount: 0
+  sceneIndex: 0
 --- !u!82 &85208228
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3016,11 +3017,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 08a68409a7e328d459e5810687973cdf, type: 2}
   audioSlider: {fileID: 0}
-  OpenSound: {fileID: 8300000, guid: 14588ee319fccd54d828d2231bef7d3a, type: 3}
   MactchSound: {fileID: 8300000, guid: 2a4e8e97ff4021844ae384a942b9a2d7, type: 3}
   MissMactchSound: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
-  BackGorundMusic: {fileID: 8300000, guid: 204d07d4e17164943a94f6517bec823e, type: 3}
-  HurryUpMusic: {fileID: 8300000, guid: 92a98e3d86a890944b714d7f3b72148f, type: 3}
+  BackGorundMusic: {fileID: 8300000, guid: 965e9132928c1bd49b993c2dfdc96d01, type: 3}
+  HurryUpMusic: {fileID: 8300000, guid: dcd7b366d599d9f4cbfebb597e1c7962, type: 3}
   audioSource: {fileID: 1605223632}
 --- !u!4 &1605223634
 Transform:
