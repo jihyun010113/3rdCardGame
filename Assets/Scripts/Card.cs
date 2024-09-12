@@ -22,12 +22,11 @@ public class Card : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         FirstOpenCard(); //게임시작과 동시에 카드 1초간 보여주기 기능
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
+
     public void ImageSetting(int number)
     {
         idx = number;
@@ -44,6 +43,7 @@ public class Card : MonoBehaviour
         front.SetActive(false);
         back.SetActive(true);
     }
+
     public void OpenCard()
     {
         audioSource.PlayOneShot(clip);
@@ -55,18 +55,17 @@ public class Card : MonoBehaviour
         {
             GameManager.Instance.firstCard = this;
         }
-        else if(GameManager.Instance.secondCard == null)
+        else if (GameManager.Instance.secondCard == null)
         {
             GameManager.Instance.secondCard = this;
             GameManager.Instance.Matched();
-        }       
-        else if (GameManager.Instance.secondCard != null)
+
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("CardFlip") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 2f)
         {
-            anim.SetBool("isOpen", false);
-            front.SetActive(false);
-            back.SetActive(true);
         }
     }
+
     public void DestroyCard()
     {
         Invoke("DestroyCardInvoke", 0.5f);
@@ -83,7 +82,7 @@ public class Card : MonoBehaviour
     {
         anim.SetBool("isOpen", false);
         front.SetActive(false);
-        back.SetActive(true);
+        back.SetActive(true);        
     }
 
 }
