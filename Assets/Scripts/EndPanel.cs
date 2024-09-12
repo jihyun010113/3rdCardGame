@@ -17,6 +17,10 @@ public class EndPanel : MonoBehaviour
     void OnEnable() //활성화 될때마다 호출되는 함수
     {
         GameOver(GameManager.Instance.time_Tmp);
+        AudioManager.Instance.audioSource.clip = AudioManager.Instance.EndPanelSound;
+        AudioManager.Instance.audioSource.Stop();
+        AudioManager.Instance.audioSource.Play();
+        
     }
 
     public void GameOver(float time)

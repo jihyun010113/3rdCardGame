@@ -5,20 +5,51 @@ using UnityEngine.SceneManagement;
 
 public class Retry : MonoBehaviour
 {
+
+
     public void ReMain()
     {
-        SceneManager.LoadScene("StartScene");
+
+
+        SceneManager.LoadScene(0);
+        AudioManager.Instance.ChangeBGM(0);
+
+
     }
+
     public void ReEasy()
     {
-        SceneManager.LoadScene("EazyScene");
+
+
+        SceneManager.LoadScene(3);
+        AudioManager.Instance.ChangeBGM(3);
+
+
     }
+
     public void ReNormal()
+
     {
-        SceneManager.LoadScene("NormalScene");
+
+        SceneManager.LoadScene(2);
+        AudioManager.Instance.ChangeBGM(2);
+
+
+
     }
+
     public void ReHard()
+
     {
-        SceneManager.LoadScene("HardScene");
+
+
+
+        SceneManager.LoadScene(1);
+        AudioManager.Instance.ChangeBGM(1);
+
+
+
     }
+
+
 }
