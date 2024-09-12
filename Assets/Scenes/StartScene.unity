@@ -612,6 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
   OptionSence: {fileID: 1313814682}
+  sliderParent: {fileID: 2097966743}
 --- !u!95 &263718472
 Animator:
   serializedVersion: 5
@@ -3037,6 +3038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
   OptionSence: {fileID: 1313814682}
+  sliderParent: {fileID: 2097966743}
 --- !u!1 &1261000169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,6 +3307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
   OptionSence: {fileID: 1313814682}
+  sliderParent: {fileID: 2097966743}
 --- !u!1 &1359508514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +3345,7 @@ MonoBehaviour:
   BackGorundMusic: {fileID: 8300000, guid: 3814df674bc9cca4b8438ec1de1e7dd2, type: 3}
   HurryUpMusic: {fileID: 8300000, guid: 418038ff6dadebf4ab9d8ed5f941de75, type: 3}
   audioSource: {fileID: 1359508517}
+  sound: 0
 --- !u!4 &1359508516
 Transform:
   m_ObjectHideFlags: 0
@@ -4397,8 +4401,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1359508515}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1313814687}
+        m_TargetAssemblyTypeName: CreditButton, Assembly-CSharp
         m_MethodName: AudioControl
         m_Mode: 1
         m_Arguments:
@@ -4863,6 +4867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreditSence: {fileID: 1254446456}
   OptionSence: {fileID: 1313814682}
+  sliderParent: {fileID: 2097966743}
 --- !u!95 &2112353641
 Animator:
   serializedVersion: 5
