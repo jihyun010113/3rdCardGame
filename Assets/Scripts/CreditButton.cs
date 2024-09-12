@@ -75,17 +75,10 @@ public class CreditButton : MonoBehaviour
 
     public void Credit()
     {
-
-
         if (CreditSence.activeSelf == false)
         {
-
-
             CreditSence.SetActive(true);
-
         }
-
-
     }
 
     public void CreditBack()
@@ -98,8 +91,6 @@ public class CreditButton : MonoBehaviour
 
 
             CreditSence.SetActive(false);
-
-
 
         }
 
