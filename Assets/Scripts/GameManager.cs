@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public float time;
     public float time_Tmp;
+    float obstacle_time;
     public Text time_Txt;
 
 
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     public Card secondCard;
     public int cardCount;
 
-    int sceneIndex;
+    public int sceneIndex;
 
     private void Awake()
     {
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         RequesteBack.SetActive(true);//카드를 맞춰주세요 켜기(기본)   
 
+        Obstacle_Reset();
     }
 
     // Update is called once per frame
@@ -120,9 +122,34 @@ public class GameManager : MonoBehaviour
 
         }
 
-
+        if(obstacle_time > 0)
+        {
+            obstacle_time -= Time.deltaTime;
+        }
+        else
+        {
+            LevelManager.Instance.Obstacle();
+            Obstacle_Reset();
+        }
 
     }
+    
+    public void Obstacle_Reset()
+    {
+        if (sceneIndex == 3)
+        {
+            obstacle_time = 100f;
+        }
+        else if (sceneIndex == 2)
+        {
+            obstacle_time = 8f;
+        }
+        else if (sceneIndex == 1)
+        {
+            obstacle_time = 4.5f;
+        }
+    }    
+
     public void ObstacleSign() //장애물 실행시 사인표출
     {
         //Invoke("ObstacleSignOnOff", 4f);
@@ -196,8 +223,6 @@ public class GameManager : MonoBehaviour
 
     public void Correct_Card()
     {
-        if(sceneIndex != 3)
-            LevelManager.Instance.Match_CntUp();
         if (time_Tmp + 3f <= time)
             time_Tmp += 3f;
         else

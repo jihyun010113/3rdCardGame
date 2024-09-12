@@ -42,22 +42,16 @@ public class LevelManager : MonoBehaviour
             isObstacle = true;
     }
 
-    public void Match_CntUp()
-    {
-        //asdf
-        match_cnt++;
-        if (match_cnt >= 2)
-        {
-            if(isObstacle == true)
-            {
-                match_cnt = 0;
-                Obstacle();
-            }
-        }
-    }
+    
 
     public void Obstacle() // 중복방지
     {
+        if (isObstacle == false || GameManager.Instance.sceneIndex == 3)
+        {
+            Debug.Log("안됨");
+            return;
+        }
+
         GameManager.Instance.ObstacleSign();     
 
         int ran_Obstacle;
