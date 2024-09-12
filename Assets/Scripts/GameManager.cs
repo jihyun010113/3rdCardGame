@@ -207,6 +207,7 @@ public class GameManager : MonoBehaviour
 
     public void Wrong_Card()
     {
+        AudioManager.Instance.MissMatchSound();
         if (sceneIndex == 3)
         {
             time_Tmp -= 1f;
@@ -223,6 +224,7 @@ public class GameManager : MonoBehaviour
 
     public void Correct_Card()
     {
+        AudioManager.Instance.MatchedSound();
         if (time_Tmp + 3f <= time)
             time_Tmp += 3f;
         else
