@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     public Camera camera;*/
 
 
-    bool isHurry = false;
-    bool isOver = false;
+    public bool isHurry = false;
+    public bool isOver = false;
     AudioSource audioSource;
     public AudioClip clip;
 
