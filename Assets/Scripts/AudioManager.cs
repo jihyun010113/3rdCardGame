@@ -74,6 +74,7 @@ public class AudioManager : MonoBehaviour
     
     {
 
+        DontDestroyOnLoad(gameObject);
 
         float sound = audioSlider.value;
 

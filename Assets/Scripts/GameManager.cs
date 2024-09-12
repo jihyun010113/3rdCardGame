@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
 
     bool isHurry = false;
-
+    bool isOver = false;
     AudioSource audioSource;
     public AudioClip clip;
 
@@ -93,6 +93,19 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             lose.gameObject.SetActive(true);
             RequesteBack.SetActive(false); //카드를 맞춰주세요 끄기
+
+            if (isOver== false && time_Tmp <= 0.0f)
+            {
+                isOver = true;
+                Debug.Log("isover");
+                AudioManager.Instance.audioSource.clip = AudioManager.Instance.BackGorundMusic;
+                AudioManager.Instance.audioSource.Stop();
+                AudioManager.Instance.audioSource.Play();
+
+
+
+
+            }
         }
         time_Txt.text = time_Tmp.ToString("N1");
 
@@ -101,9 +114,14 @@ public class GameManager : MonoBehaviour
             isHurry = true; // 스위치가 켜짐            
 
             AudioManager.Instance.audioSource.clip = AudioManager.Instance.HurryUpMusic;
-            //AudioManager.Instance.audioSource.Stop();
+            AudioManager.Instance.audioSource.Stop();
             AudioManager.Instance.audioSource.Play();
+
+
         }
+
+
+
     }
     public void ObstacleSign() //장애물 실행시 사인표출
     {
