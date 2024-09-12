@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(OpenSound);
     }
-
     public void MatchedSound() //카드 맞출때 소리
     {
         audioSource.PlayOneShot(MactchSound);
@@ -57,24 +56,17 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(HurryUpMusic);
     }
-
     public void AudioControl()
-    
     {
         float sound = audioSlider.value;
 
         if (sound == -40f) masterMixer.SetFloat("Master", -80);
         else masterMixer.SetFloat("Master", sound);
     }
-
     public void GameOver()
-
     {
         audioSource.clip = this.BackGorundMusic;
         audioSource.Play();
     }
-
-
-    
 }
 

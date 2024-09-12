@@ -14,12 +14,10 @@ public class Retry : MonoBehaviour
         SceneManager.LoadScene("EazyScene");
     }
     public void ReNormal()
-
     {
         SceneManager.LoadScene("NormalScene");
     }
     public void ReHard()
-
     {
         SceneManager.LoadScene("HardScene");
     }

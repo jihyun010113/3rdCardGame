@@ -15,7 +15,7 @@ public class StartButton : MonoBehaviour
     public Text BestScoreNow_Txt;
     float bestNow;
     public Animator btnAnim;
-    public void Start()
+    void Start() //private
       
     {
        //PlayerPrefs.DeleteAll(); // 베스트 스코어 초기화
@@ -34,7 +34,7 @@ public class StartButton : MonoBehaviour
         }
 
     }
-    public void Update()
+    void Update() // private // onenable <= hardBtn
     {
         goalScore = 30.0f;
         isHard = goalScore <= bestNow;
