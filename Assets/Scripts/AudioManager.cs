@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public float sound;
+
     private void Awake()
     {
         if (Instance == null)
@@ -65,19 +67,17 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void AudioControl()
+    /*public void AudioControl()
     
     {
 
-        
-
-        float sound = audioSlider.value;
+        sound = audioSlider.value;
 
         if (sound == -40f) masterMixer.SetFloat("Master", -80);
         else masterMixer.SetFloat("Master", sound);
     
     
-    }
+    }*/
 
     public void GameOver()
 
