@@ -79,7 +79,7 @@ public class LevelManager : MonoBehaviour
     {
         board.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         for (int i = 0; i < 180; i++)
-        {
+        {       
             board.gameObject.transform.rotation = Quaternion.Euler(0, i, 0);
             yield return new WaitForSeconds(0.005f);
         }

@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
     public GameObject warningSign;
     public Animator warningSignAnim;
 
+    public GameObject addTime;
+    public GameObject mnTime1;
+    public GameObject mnTime2;
+    public GameObject mnTime3;
+
     /*public GameObject timeCurtain;
     public Camera camera;*/
 
@@ -60,7 +65,7 @@ public class GameManager : MonoBehaviour
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(sceneIndex);
 
-        if(sceneIndex == 3)
+        if (sceneIndex == 3)
         {
             time = 35f;
         }
@@ -82,7 +87,7 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {           
+    {
         if (time_Tmp > 0)
         {
             time_Tmp -= Time.deltaTime;
@@ -96,7 +101,7 @@ public class GameManager : MonoBehaviour
             lose.gameObject.SetActive(true);
             RequesteBack.SetActive(false); //카드를 맞춰주세요 끄기
 
-            if (isOver== false && time_Tmp <= 0.0f)
+            if (isOver == false && time_Tmp <= 0.0f)
             {
                 isOver = true;
                 Debug.Log("isover");
@@ -122,7 +127,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if(obstacle_time > 0)
+        if (obstacle_time > 0)
         {
             obstacle_time -= Time.deltaTime;
         }
@@ -133,7 +138,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    
+
     public void Obstacle_Reset()
     {
         if (sceneIndex == 3)
@@ -148,17 +153,17 @@ public class GameManager : MonoBehaviour
         {
             obstacle_time = 4.5f;
         }
-    }    
+    }
 
     public void ObstacleSign() //장애물 실행시 사인표출
     {
         //Invoke("ObstacleSignOnOff", 4f);
-        warningSign.SetActive(true);        
+        warningSign.SetActive(true);
         warningSignAnim.SetBool("isWarning", true);
         RequesteBack.SetActive(false);
     }
     public void ObstacleSignOnOff() //장애물 실행시 사인표출
-    {        
+    {
         warningSign.SetActive(false);
         warningSignAnim.SetBool("isWarning", false);
         RequesteBack.SetActive(true);
@@ -184,16 +189,16 @@ public class GameManager : MonoBehaviour
         else
         {
             Wrong_Card();
-            Invoke("InvokeCardClose",0.5f);
+            Invoke("InvokeCardClose", 0.5f);
         }
-        
+
     }
     public void InvokeCardDestroy()  //카드 삭제후, null값으로 변경
     {
         firstCard.DestroyCard();
-        secondCard.DestroyCard();         
+        secondCard.DestroyCard();
         firstCard = null;
-        secondCard = null;        
+        secondCard = null;
 
     }
     public void InvokeCardClose() //카드 다시 뒤집기 후, null값으로 변경
@@ -211,23 +216,32 @@ public class GameManager : MonoBehaviour
         if (sceneIndex == 3)
         {
             time_Tmp -= 1f;
+            mnTime1.SetActive(true);
         }
         else if (sceneIndex == 2)
         {
             time_Tmp -= 1.5f;
+            mnTime2.SetActive(true);
         }
         else if (sceneIndex == 1)
         {
             time_Tmp -= 2f;
+            mnTime3.SetActive(true);
         }
     }
 
     public void Correct_Card()
     {
         AudioManager.Instance.MatchedSound();
+        addTime.SetActive(true);
+
         if (time_Tmp + 3f <= time)
+        {
             time_Tmp += 3f;
+        }
         else
-            time_Tmp = time;
-    }
+        {
+            time_Tmp = time;            
+        }
+    }    
 }
