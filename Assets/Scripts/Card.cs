@@ -22,12 +22,11 @@ public class Card : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         FirstOpenCard(); //게임시작과 동시에 카드 1초간 보여주기 기능
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
+
     public void ImageSetting(int number)
     {
         idx = number;
@@ -44,8 +43,14 @@ public class Card : MonoBehaviour
         front.SetActive(false);
         back.SetActive(true);
     }
-    public void OpenCard()
+
+    public void OpenCard() //OnClick
     {
+        if (GameManager.Instance.firstCard != null && GameManager.Instance.secondCard != null)
+        {
+            return;
+        }
+
         audioSource.PlayOneShot(clip);
         anim.SetBool("isOpen", true);
         front.SetActive(true);
@@ -55,35 +60,23 @@ public class Card : MonoBehaviour
         {
             GameManager.Instance.firstCard = this;
         }
-        else if(GameManager.Instance.secondCard == null)
+        else if (GameManager.Instance.secondCard == null)
         {
             GameManager.Instance.secondCard = this;
             GameManager.Instance.Matched();
-        }       
-        else if (GameManager.Instance.secondCard != null)
-        {
-            anim.SetBool("isOpen", false);
-            front.SetActive(false);
-            back.SetActive(true);
-        }
+
+        }        
     }
+
     public void DestroyCard()
     {
-        Invoke("DestroyCardInvoke", 0.5f);
-    }
-    public void DestroyCardInvoke()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject);       
     }
     public void CloseCard()
     {
-        Invoke("CloseCardInvoke", 0.5f);
-    }
-    public void CloseCardInvoke()
-    {
         anim.SetBool("isOpen", false);
         front.SetActive(false);
-        back.SetActive(true);
-    }
+        back.SetActive(true);        
+    }    
 
 }
