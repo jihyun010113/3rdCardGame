@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance;
 
-    public AudioClip OpenSound;
     public AudioClip MactchSound;
     public AudioClip MissMactchSound;
     public AudioClip BackGorundMusic;
@@ -49,10 +48,6 @@ public class AudioManager : MonoBehaviour
         
 
 
-    }
-    public void OpenCardSound() //카드 열때 소리
-    {
-        audioSource.PlayOneShot(OpenSound);
     }
 
     public void MatchedSound() //카드 맞출때 소리
