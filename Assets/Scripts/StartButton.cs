@@ -47,14 +47,14 @@ public class StartButton : MonoBehaviour
             hardBtn.interactable = true;
 
         selectSence.SetActive(true);
-
     }
 
     public void Main()
     {
 
 
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene(0);
+        AudioManager.Instance.ChangeBGM(0);
 
 
     }
@@ -62,8 +62,8 @@ public class StartButton : MonoBehaviour
     public void Easy()
     {
 
-
-        SceneManager.LoadScene("EazyScene");
+        SceneManager.LoadScene(3);
+        AudioManager.Instance.ChangeBGM(3);
 
 
     }
@@ -72,7 +72,9 @@ public class StartButton : MonoBehaviour
 
     {
 
-        SceneManager.LoadScene("NormalScene");
+        SceneManager.LoadScene(2);
+        AudioManager.Instance.ChangeBGM(2);
+
 
 
 
@@ -82,8 +84,8 @@ public class StartButton : MonoBehaviour
 
     {
 
-            SceneManager.LoadScene("HardScene");
-
+        SceneManager.LoadScene(1);
+        AudioManager.Instance.ChangeBGM(1);
 
     }
 
