@@ -125,8 +125,7 @@ public class GameManager : MonoBehaviour
         {
             Correct_Card();
             audioSource.PlayOneShot(clip);
-            firstCard.DestroyCard();
-            secondCard.DestroyCard();
+            Invoke("InvokeCardDestroy", 0.5f);
 
             cardCount -= 2;
             if (cardCount == 0)
@@ -140,14 +139,26 @@ public class GameManager : MonoBehaviour
         else
         {
             Wrong_Card();
-            firstCard.CloseCard();
-            secondCard.CloseCard();
+            Invoke("InvokeCardClose",0.5f);
         }
-
+        
+    }
+    public void InvokeCardDestroy()  //카드 삭제후, null값으로 변경
+    {
+        firstCard.DestroyCard();
+        secondCard.DestroyCard();         
         firstCard = null;
         secondCard = null;        
+
     }
-    
+    public void InvokeCardClose() //카드 다시 뒤집기 후, null값으로 변경
+    {
+        firstCard.CloseCard();
+        secondCard.CloseCard();
+        firstCard = null;
+        secondCard = null;
+    }
+
 
     public void Wrong_Card()
     {

@@ -44,8 +44,13 @@ public class Card : MonoBehaviour
         back.SetActive(true);
     }
 
-    public void OpenCard()
+    public void OpenCard() //OnClick
     {
+        if (GameManager.Instance.firstCard != null && GameManager.Instance.secondCard != null)
+        {
+            return;
+        }
+
         audioSource.PlayOneShot(clip);
         anim.SetBool("isOpen", true);
         front.SetActive(true);
@@ -60,29 +65,18 @@ public class Card : MonoBehaviour
             GameManager.Instance.secondCard = this;
             GameManager.Instance.Matched();
 
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("CardFlip") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 2f)
-        {
-        }
+        }        
     }
 
     public void DestroyCard()
     {
-        Invoke("DestroyCardInvoke", 0.5f);
-    }
-    public void DestroyCardInvoke()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject);       
     }
     public void CloseCard()
-    {
-        Invoke("CloseCardInvoke", 0.5f);
-    }
-    public void CloseCardInvoke()
     {
         anim.SetBool("isOpen", false);
         front.SetActive(false);
         back.SetActive(true);        
-    }
+    }    
 
 }
