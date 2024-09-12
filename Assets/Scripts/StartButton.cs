@@ -24,20 +24,16 @@ public class StartButton : MonoBehaviour
 
         if (PlayerPrefs.HasKey("best"))
         {
-
            bestNow = PlayerPrefs.GetFloat("best");
            BestScoreNow_Txt.text = bestNow.ToString("N1");
-
         }
 
         else
         {
-
             BestScoreNow_Txt.text = "점수 없음";
         }
 
     }
-
     public void Update()
     {
         goalScore = 30.0f;
@@ -48,7 +44,6 @@ public class StartButton : MonoBehaviour
             hardBtn.interactable = true;
         }
     }
-
     public void StageSelect()
     {
         if ( !selectSence.activeSelf )
@@ -56,37 +51,27 @@ public class StartButton : MonoBehaviour
             selectSence.SetActive(true);
         }
     }
-
     public void Main()
     {
         SceneManager.LoadScene("StartScene");
     }
-
     public void Easy()
     {
         SceneManager.LoadScene("EazyScene");
     }
-
     public void Normal()
-
     {
         SceneManager.LoadScene("NormalScene");
     }
-
     public void Hard()
-
     {
             SceneManager.LoadScene("HardScene");
     }
-
     public void SelectBack()
     {
         if (selectSence.activeSelf == true)
         {
             selectSence.SetActive(false);
-
         }
-
     }
-
 }
