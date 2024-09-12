@@ -13189,10 +13189,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 08a68409a7e328d459e5810687973cdf, type: 2}
   audioSlider: {fileID: 0}
+  isplaying: 0
   MactchSound: {fileID: 8300000, guid: 2a4e8e97ff4021844ae384a942b9a2d7, type: 3}
   MissMactchSound: {fileID: 8300000, guid: a3f7e9e3f7f8e554f89af7f0f3f1008c, type: 3}
-  BackGorundMusic: {fileID: 8300000, guid: 965e9132928c1bd49b993c2dfdc96d01, type: 3}
+  BackGorundMusic: {fileID: 8300000, guid: 76f61e5ae6b887f4788a822b2e001cc2, type: 3}
   HurryUpMusic: {fileID: 8300000, guid: dcd7b366d599d9f4cbfebb597e1c7962, type: 3}
+  GamePlaySound: {fileID: 8300000, guid: 965e9132928c1bd49b993c2dfdc96d01, type: 3}
+  EndPanelSound: {fileID: 8300000, guid: 8c478c21df063e541acf4a5a913e706a, type: 3}
+  sceneIndex: 0
   audioSource: {fileID: 1605223632}
   sound: 0
 --- !u!4 &1605223634
